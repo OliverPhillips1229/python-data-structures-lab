@@ -66,7 +66,13 @@ print('Exercise 3:', slice_foods())
 # a string with this format: “I was born in <city>, <state> - population of <population>”
 
 def hometown_info():
-    # your code here
+    home_town = {
+        'city': 'Studio City',
+        'state': 'Los Angeles',
+        'population': 'a lot.'
+    }
+    home_town_message = f"I live in {home_town['city']}, {home_town['state']} - population of {home_town['population']}"
+    return home_town_message
 
 # Call the function and print the result
 print('Exercise 4:', hometown_info())
@@ -78,7 +84,15 @@ print('Exercise 4:', hometown_info())
 # dictionary and append a string with the following format to home_town_items: "<key> = <value>"
 
 def list_home_town_items():
-    # your code here
+    home_town = {
+        'city': 'Studio City',
+        'state': 'Los Angeles',
+        'population': 'a lot.'
+    }
+    home_town_items = []
+    for key, value in home_town.items():
+        home_town_items.append(f"{key} = {value}")
+    return home_town_items
 
 # Call the function and print the result
 print('Exercise 5:', list_home_town_items())
@@ -90,7 +104,9 @@ print('Exercise 5:', list_home_town_items())
 # For example: ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
 
 def create_awesome_students():
-    # your code here
+    students = ['John', 'Paul', 'George', 'Ringo']
+    awesome_students = [f"{student} is awesome!" for student in students]
+    return awesome_students
 
 # Call the function and print the result
 print('Exercise 6:', create_awesome_students())
@@ -104,7 +120,9 @@ print('Exercise 6:', create_awesome_students())
 # foods_with_an_a would be a list equal to ['Taco', 'Sandwich']
 
 def filter_foods_with_a():
-    # your code here
+    foods = ('Cheeseburger', 'Double Double', 'Animal Fries', 'Lite Pink Lemonade')
+    foods_with_an_a = [food for food in foods if 'a' in food]
+    return foods_with_an_a
 
 # Call the function and print the result
 print('Exercise 7:', filter_foods_with_a())
